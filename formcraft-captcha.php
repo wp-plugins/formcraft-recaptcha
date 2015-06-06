@@ -6,7 +6,7 @@
 	Description: reCaptcha Add-on for FormCraft
 	Author: nCrafts
 	Author URI: http://formcraft-wp.com/
-	Version: 1
+	Version: 1.0.1
 	Text Domain: formcraft-recaptcha
 	*/
 
@@ -48,6 +48,11 @@
 		global $fc_final_response;
 		require_once __DIR__ . '/src/autoload.php';
 		$captcha = formcraft_get_addon_data('Captcha', $filtered_content['Form ID']);
+		$has_captcha = false;
+		foreach ($raw_content as $key => $value) {
+			$has_captcha = $value['type'] == 'reCaptcha' ? true : $has_captcha;
+		}
+		if ( $has_captcha==false ) { return false; }
 		if ( empty($captcha) || empty($captcha['secret_key']) )
 		{
 			$fc_final_response['failed'] = 'Secret Key required for reCaptcha';
