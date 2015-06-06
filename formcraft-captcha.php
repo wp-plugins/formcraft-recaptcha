@@ -38,7 +38,7 @@
 
 	// We show a simple text field in the add-on's settings
 	function recaptcha_addon_settings() {
-		echo "<div style='padding: 20px'><div style='text-align: center; margin: 0 0 20px 0'>Before you proceed, you will need the Site Key and Secret Key. You can find them <a target='_blank' href='https://www.google.com/recaptcha/admin'>here</a>.</div><input style='padding: 8px 12px; border-radius: 3px 3px 0 0; border-bottom: 0px; box-shadow: none; font-size: 13px; margin: 0; width: 100%' placeholder='Site Key' type='text' ng-model='Addons.Captcha.site_key'><input style='padding: 8px 12px; border-radius: 0 0 3px 3px; box-shadow: none; font-size: 13px; margin: 0; width: 100%' placeholder='Secret Key' type='text' ng-model='Addons.Captcha.secret_key'></div>";
+		echo "<div style='padding: 20px'><div style='text-align: center; margin: 0 0 20px 0'>Before you proceed, you will need the Site Key and Secret Key. You can find them <a target='_blank' href='https://www.google.com/recaptcha/admin'>here</a>.</div><input style='padding: 8px 12px; border-radius: 3px 3px 0 0; border-bottom: 0px; box-shadow: none; font-size: 13px; margin: 0; width: 100%' placeholder='Site Key' type='text' ng-model='Addons.Captcha.site_key'><input style='padding: 8px 12px; border-radius: 0 0 3px 3px; box-shadow: none; font-size: 13px; margin: 0; width: 100%' placeholder='Secret Key' type='text' ng-model='Addons.Captcha.secret_key'><div style='margin-top: 15px; text-align: center'>Next, add captcha through<br><strong>Add Field → More Fields → ReCaptcha</strong></div></div>";
 	}
 
 	// We hook into form submissions to check the submitted form data, and throw an error if
